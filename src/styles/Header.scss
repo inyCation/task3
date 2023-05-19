@@ -1,0 +1,71 @@
+@import "Var";
+
+
+
+nav{
+    @include displayflex(row);
+    height: 6.5rem;
+    color: $text-blck;
+    box-shadow: 0 0 10px #000;
+    background: $text-white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    > .logo {
+        > img{
+            filter: invert(1);
+            height: 6rem;
+            width: 9rem;
+        }
+    }
+
+    > .menu{
+        @include displayflex(row);
+        gap: 4rem;
+
+        > li {
+            > a{  
+                color: $text-blck;
+                font-family: $font-primary;
+                font-size: 1.4rem;
+                font-weight: 700;
+                
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 0.05rem;
+                    width: Calc(100% + 4px);
+                    background: $text-blck;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: 0.159s all ease-in-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+    > .search-cart{
+        @include displayflex(row);
+        gap: 3rem;
+        font-size: 3rem;
+        > .search{
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+        > .cart{
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+    }
+
+}

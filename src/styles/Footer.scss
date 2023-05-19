@@ -1,0 +1,114 @@
+@import "Var";
+@import "App"; 
+
+footer{
+    @include displayflex(row);
+    height: 34.5rem;
+    width: 100vw;
+    background-color: $text-white;
+    color: $text-blck;
+
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+
+    
+    > .f-box{
+        height: 26.2rem;
+        width: 23.7rem;
+        >h3{
+            display: grid;
+            place-items: start;
+
+            margin-bottom: 2rem;
+
+            font-size: 1.4rem;
+            font-weight: 800;
+            font-family: $font-primary;
+            color: $text-blck;
+        }
+        >li{
+            @include footerfwlhfs();
+            >a{
+                // color: $text-white;
+                font-family: $font-primary;
+            }
+        }
+        >.social{
+            @include footerfwlhfs();
+            >a{
+                color: $text-blck;
+                font-family: $font-primary;
+            }
+        }
+        li {
+            a{  
+                color: $text-blck;
+                font-family: $font-primary;
+                font-size: 1.4rem;
+                font-weight: 700;
+                
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 0.05rem;
+                    width: 50%;
+                    // max-width: fit-content;
+                    background: $text-blck;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: 0.159s all ease-in-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom{
+    background-color: $bg-footer-blck;
+    >.hr-line{
+    
+       @include displayflex(column);
+        >hr{
+            width: 90vw;
+        }
+    }
+    >a{
+        @include displayflex(row);
+        font-size: 2rem;
+        color: $text-white;
+    }
+
+}
+
+.chat-with-us{
+    @include displayflex(row);
+
+    background: $whatsapp-clr;
+
+    position: fixed;
+    right: 8rem;
+    top: 85vh;
+    
+    height: 4.5rem;
+    width: 12.5rem;
+    
+    color: $text-white;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px $text-white;
+
+    font-size: 1.4rem;
+    > svg{
+        font-size: 2rem;
+    }
+    > a{
+        color: $text-white;
+        // margin-right: 0.2rem;
+        font-family: $font-primary;
+        font-weight: 800;
+    }
+}

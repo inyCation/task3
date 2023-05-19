@@ -1,0 +1,63 @@
+@import "../Var";
+
+.bestselling-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    top: 3.5rem;
+     
+    > .bestselling-title{
+        font-size: 2.9rem;
+        font-family: $font-primary;
+        margin-bottom: 2rem;
+
+    }
+    > .phone-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        column-gap: 2rem;
+        row-gap: 5rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        margin-bottom: 15rem;
+
+        >.phone{
+
+            @include displayflex(column);
+
+            > img{
+                width: 22vw;
+                height: 60vh;
+                &:hover + a{
+                    // @include underlineA();
+                    color: aqua
+                }
+            }
+
+            > a{
+                @include displayflex(row);
+                width: 100%;
+                color: $text-blck;
+                font-family: $font-primary;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            
+        }
+        &:hover + a{
+            @include underlineA();
+        }
+    }
+
+    
+}

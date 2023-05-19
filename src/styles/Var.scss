@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+$font-primary: 'Montserrat';
+
+$text-white: #fff;
+$text-blck: #000;
+
+$bg-footer-blck: #1C1F20;
+$whatsapp-clr: #22CE5B;
+$font-size: 10px;
+
+
+@mixin displayflex($dir){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: $dir;
+}
+
+@mixin footerfwlhfs(){
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+@mixin underlineA(){
+    a{  
+        color: $text-blck;
+        font-family: $font-primary;
+        font-size: 1.4rem;
+        font-weight: 700;
+        
+        &::after{
+            content: "";
+            display: block;
+            height: 0.05rem;
+            width: 100%;
+            background: $text-blck;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.159s all ease-in-out;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+        }
+    }
+}

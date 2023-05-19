@@ -1,0 +1,19 @@
+@import "Var";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: $font-size;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}

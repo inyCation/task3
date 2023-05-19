@@ -1,0 +1,45 @@
+@import "../Var.scss";
+
+
+.title{
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-family: $font-primary;
+    font-weight: 700;
+}
+
+.select-brand-container{
+    font-family: $font-primary;
+    font-weight: 700;
+    
+    overflow-x: scroll;
+    // width: max-content;
+
+
+    > .brand-container{
+        display: flex;
+        gap: 5rem;
+        >div{
+
+            &:hover{
+                cursor: pointer;
+            }
+            >img{
+                height: 8rem;
+                width: 8rem;
+                border-radius: 50rem;
+            }
+            >p{
+                display: grid;
+                place-items: center;
+                font-family: $font-primary;
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin: 2rem 0;
+            }
+        }
+    }
+
+
+}
