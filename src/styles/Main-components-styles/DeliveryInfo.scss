@@ -1,0 +1,30 @@
+@import "../Var";
+
+.deliverInfo_container{
+    @include displayflex(row);
+    height: 45vh;
+    font-family: $font-primary;
+
+    >.deliverInfo_card{
+        height: 80%;
+        width: 30vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        > a{
+            font-size: 7rem ;
+        }
+        > .deliverInfo_heading{
+            font-size: 3rem;
+        }
+        > .deliverInfo_para{
+            width: 25vw;
+            font-size: 1.5rem;
+
+            text-align: center;
+            
+        }
+
+    }
+}
