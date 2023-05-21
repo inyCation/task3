@@ -16,6 +16,7 @@ import "./styles/MediaQuery.scss"
 function App() {
   return (
     <>
+      
       <Header />
 
       <Main />

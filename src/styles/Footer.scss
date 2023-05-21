@@ -68,18 +68,24 @@ footer{
 }
 
 .footer-bottom{
-    background-color: $bg-footer-blck;
+    background-color: $text-white;
     >.hr-line{
-    
-       @include displayflex(column);
+        @include displayflex(column);
         >hr{
             width: 90vw;
+            color: $text-blck;
         }
     }
     >a{
-        @include displayflex(row);
-        font-size: 2rem;
-        color: $text-white;
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        display: flex;
+        justify-content: flex-start;
+
+        padding: 1rem;
+        margin-left: 4vw;
+
+        color: $text-blck;
     }
 
 }
