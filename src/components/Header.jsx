@@ -3,6 +3,9 @@ import Logo from "../assets/Img/Logo_White.webp";
 
 import {FaSearch, FaCartArrowDown} from "react-icons/fa";
 
+import "../styles/Header.scss";
+
+
 
 function Header() {
   return (

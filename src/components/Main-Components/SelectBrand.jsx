@@ -13,6 +13,7 @@ import Samsungimg from "../../assets/Main-content-img/samsung.png";
 import Vivoimg from "../../assets/Main-content-img/vivo.jpeg";
 import Xiaomiimg from "../../assets/Main-content-img/xiaomi.png";
 
+import "../../styles/Main-components-styles/SelectBrand.scss";
 
 
 

@@ -1,0 +1,44 @@
+@import "../Var.scss";
+
+.follow_Insta_container{
+    @include displayflex(column);
+    > .follow_Insta_title{
+        font-size: 2.9rem;
+        font-family: $font-primary;
+        margin-bottom: 2rem;
+    }
+    > .img_tiles_container{
+        @include displayflex(row);
+        flex-wrap: wrap;
+        > .img_box{
+            position: relative;
+            > img{
+                width: 24.8vw;
+            }
+            > .follow_logo_insta{
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+
+                background: $card-hover-bg-blck;
+                font-size: 1.5rem;
+                display: none;
+                transition: all 1s ease-in-out;
+                
+                >a{     
+                    color: $text-white;
+                    font-family: $font-primary;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &:hover > .follow_logo_insta{
+                transition: all 1s ease-in-out;
+                display: block;
+            }
+        }
+    }
+}
