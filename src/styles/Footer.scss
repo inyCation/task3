@@ -100,7 +100,7 @@ footer{
     top: 85vh;
     
     height: 4.5rem;
-    width: 12.5rem;
+    width: 14.5rem;
     
     color: $text-white;
 
@@ -108,13 +108,13 @@ footer{
     box-shadow: 0 0 10px $text-white;
 
     font-size: 1.4rem;
-    > svg{
-        font-size: 2rem;
-    }
+
     > a{
         color: $text-white;
-        // margin-right: 0.2rem;
         font-family: $font-primary;
         font-weight: 800;
+    }
+    >.chat_with_us_logo{
+        font-size: 3.2rem;
     }
 }

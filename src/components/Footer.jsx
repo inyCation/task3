@@ -46,7 +46,10 @@ function Footer() {
 		</div>
 
 		<div className="chat-with-us">
-			<FaWhatsapp /> <a href="#">Chat With Us</a>
+			<a className="chat_with_us_logo" >
+				<FaWhatsapp /> 
+			</a>
+			<a href="#">Chat With Us</a>
 		</div>
 	</div>
   )
