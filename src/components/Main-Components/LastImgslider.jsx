@@ -14,7 +14,6 @@ import "../../styles/Main-components-styles/LastImgslider.scss"
 const LastImgslider = () => {
 
   const [isMobile, setIsMobile] = useState(false);
-  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 425);
@@ -30,6 +29,7 @@ const LastImgslider = () => {
   }, []);
 
 
+
   return (
     <div className="last-img-slider">
         <Carousel infiniteLoop autoPlay 
@@ -42,7 +42,7 @@ const LastImgslider = () => {
          			    <img src={isMobile ? Img1Mobile : Img1} alt="Item1" />
         		    </div>
                 <div>
-         			    <img src={isMobile ? Img1Mobile : Img1} alt="Item1" />
+         			    <img src={isMobile ? Img2Mobile : Img2} alt="Item1" />
         		    </div>
         </Carousel>
     </div>
