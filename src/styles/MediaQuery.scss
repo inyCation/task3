@@ -1,7 +1,53 @@
 @import "Var";
 
 
-@media screen and (max-width:820px) {
+@media screen and (max-width: 1355px) {
+    .bestselling-container{
+
+        > .phone-container{
+            > .phone{
+                > img{
+                    width: 22vw;
+                    height: auto;
+                }
+                // // > .name-price{
+                // //     @include displayflex(column);
+                // // }
+                // >.select_your_device{
+                //     >a{
+                //         width: 70%;
+                //     }
+                //     height: calc(83% + 2rem);
+                // }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bestselling-container{
+
+        > .phone-container{
+            > .phone{
+                > img{
+                    width: 22vw;
+                    height: auto;
+                }
+                // > .name-price{
+                //     @include displayflex(column);
+                // }
+                >.select_your_device{
+                    >a{
+                        width: 70%;
+                    }
+                    height: calc(83% + 2rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
     nav{
         width: 100vw;
         
@@ -18,9 +64,93 @@
             font-size: 1.5rem;
         }
     }
+    .bestselling-container{
+        >.bestselling-title{
+            font-size: 2.5rem;
+        }
+        > .phone-container{
+            > .phone{
+                > img{
+                    width: 22vw;
+                    height: auto;
+                }
+                > .name-price{
+                    @include displayflex(column);
+                }
+                >.select_your_device{
+                    >a{
+                        width: 70%;
+                    }
+                    height: calc(83% + 2rem);
+                }
+            }
+        }
+    }
+     .deliverInfo_container{
+        flex-direction: column;
+        height: fit-content;
+        >.deliverInfo_card{
+            width: 70vw;
+            > a{
+                font-size: 5.5rem;
+            }
+            > .deliverInfo_heading{
+                font-size: 2rem;
+            }
+            > .deliverInfo_para{
+                width: 80vw;
+                
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    
     main{
         overflow: hidden;
     }
+
+    .bestselling-container{
+        >.bestselling-title{
+            font-size: 2.3rem;
+        }
+        > .phone-container{
+            > .phone{
+                > img{
+                    width: 45vw;
+                    height: auto;
+                }
+                > .name-price{
+                    @include displayflex(column);
+                }
+                >.select_your_device{
+                    >a{
+                        width: 55%;
+                    }
+                    height: calc(83% + 2rem);
+                }
+            }
+        }
+    }
+    .follow_Insta_container{
+        > .follow_Insta_title{
+            font-size: 2.3rem;
+        }
+    }
+    .deliverInfo_container{
+        flex-direction: column;
+        height: fit-content;
+        >.deliverInfo_card{
+            width: 70vw;
+            > .deliverInfo_para{
+                width: 70vw;
+            }
+        }
+
+    }
+
     .footer-container{
         overflow: hidden;
         >footer{
@@ -30,7 +160,7 @@
 
             >.f-box{
                 margin-top: 2rem;
-                margin-left: -19rem;
+                margin-left: -9rem;
                 height:max-content;
                 width: 18.7rem;
                 
@@ -58,14 +188,57 @@
     }
 }
 
-
-@media screen and (max-width:425px) {
+@media screen and (max-width:625px) {
 
 
     .title{
-        font-size: 1.3rem;
+        font-size: 2rem;
+    }
+    .bestselling-container{
+        >.bestselling-title{
+            font-size: 2rem;
+        }
+        > .phone-container{
+            > .phone{
+                >.select_your_device{
+                    >a{
+                        width: 70%;
+                    }
+                }
+            }
+        }
     }
 
+
+    .footer-container{
+        >footer{
+            >.f-box{
+                margin-left: -18vw;
+            }
+        }
+    }
+
+
+   
+    .follow_Insta_container{
+        > .follow_Insta_title{
+            font-size: 2rem;
+        }
+        > .img_tiles_container{
+            > .img_box{
+                > img{
+                    width: 24.5vw;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:525px) {
+    .title{
+        font-size: 1.3rem;
+    }
     .bestselling-container{
         >.bestselling-title{
             font-size: 1.3rem;
@@ -75,12 +248,6 @@
                 > img{
                     width: 45vw;
                     height: auto;
-                }
-                > .name-price{
-                    @include displayflex(column);
-                }
-                >.select_your_device{
-                    height: calc(80% + 2rem);
                 }
             }
         }
@@ -100,7 +267,6 @@
         }
     }
 
-
     .deliverInfo_container{
         flex-direction: column;
         height: fit-content;
@@ -118,4 +284,5 @@
             }
         }
     }
+   
 }

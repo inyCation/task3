@@ -115,6 +115,7 @@ footer{
         font-weight: 800;
     }
     >.chat_with_us_logo{
-        font-size: 3.2rem;
+        @include displayflex(row);
+        font-size: 2.8rem;
     }
 }
