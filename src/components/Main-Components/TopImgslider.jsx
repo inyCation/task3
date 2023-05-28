@@ -15,29 +15,41 @@ import "../../styles/Main-components-styles/TopImgslider.scss";
 
 const TopImgslider = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isCarouselSwipeDisabled, setIsCarouselSwipeDisabled] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 425);
     };
 
-    handleResize(); 
+    const handleScroll = () => {
+      setIsCarouselSwipeDisabled(true);
+    };
 
-    window.addEventListener('resize', handleResize); 
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize', handleResize); 
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <div className="top-img-slider">
-      <Carousel infiniteLoop autoPlay 
-        showStatus={false} 
-        showArrows={false} 
-        interval={2000} 
+      <Carousel
+        infiniteLoop
+        autoPlay
+        showStatus={false}
+        showArrows={!isCarouselSwipeDisabled}
+        interval={2000}
         showThumbs={false}
-        showIndicators={false}>
+        showIndicators={false}
+        swipeable={!isCarouselSwipeDisabled}
+        emulateTouch={!isCarouselSwipeDisabled}
+      >
         <div>
           <img src={isMobile ? Img1Mobile : Img1} alt="Item1" />
         </div>
