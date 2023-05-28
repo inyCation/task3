@@ -14,17 +14,28 @@ import "../../styles/Main-components-styles/LastImgslider.scss"
 const LastImgslider = () => {
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isCarouselSwipeDisabled, setIsCarouselSwipeDisabled] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 425);
     };
 
+    const handleScroll = () => {
+      setIsCarouselSwipeDisabled(true);
+    };
+
+
     handleResize(); 
 
     window.addEventListener('resize', handleResize); 
+    window.addEventListener('scroll', handleScroll);
+
 
     return () => {
       window.removeEventListener('resize', handleResize); 
+      window.removeEventListener('scroll', handleScroll);
+
     };
   }, []);
 
@@ -34,10 +45,13 @@ const LastImgslider = () => {
     <div className="last-img-slider">
         <Carousel infiniteLoop autoPlay 
             showStatus={false} 
-            showArrows={false} 
+            showArrows={!isCarouselSwipeDisabled} 
             interval={2000} 
             showThumbs={false}
-            showIndicators={false} >
+            showIndicators={false} 
+            swipeable={!isCarouselSwipeDisabled}
+            emulateTouch={!isCarouselSwipeDisabled}
+            >
                 <div>
          			    <img src={isMobile ? Img1Mobile : Img1} alt="Item1" />
         		    </div>
