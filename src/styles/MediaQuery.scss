@@ -51,19 +51,20 @@
         }
         >.menu{
             @include displayflex(column);
+            
             position: absolute;
-            top: 8vh;
+            top: 6.5rem;
             left: -100vw;
 
             background: $bg-nav-mobile;
 
             height: 98vh;
             width: 100vw;
+            
             transition: all ease-in-out 0.5s;
         }
         >.menu-show{
             left: 0;
-            transition: all ease-in-out 0.5s;
         }
         >.search-cart{
             font-size: 1.5rem;
