@@ -6,7 +6,6 @@ nav{
     @include displayflex(row);
     height: 6.5rem;
     color: $text-blck;
-    box-shadow: 0 0 10px #000;
     background: $text-white;
     position: absolute;
     top: 0;
@@ -20,6 +19,14 @@ nav{
             width: 9rem;
         }
     }
+
+    > .ham{
+        display: none;
+        >a{
+            font-size: 2rem;
+        }
+    }
+
 
     > .menu{
         @include displayflex(row);

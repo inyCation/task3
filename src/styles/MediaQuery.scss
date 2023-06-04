@@ -40,7 +40,9 @@
 @media screen and (max-width:1024px) {
     nav{
         width: 100vw;
-        
+        >.ham{
+            display: block;
+        }
         >.logo {
             img{
                 height: 6rem;
@@ -48,7 +50,20 @@
             }
         }
         >.menu{
-            display: none;
+            @include displayflex(column);
+            position: absolute;
+            top: 8vh;
+            left: -100vw;
+
+            background: $bg-nav-mobile;
+
+            height: 98vh;
+            width: 100vw;
+            transition: all ease-in-out 0.5s;
+        }
+        >.menu-show{
+            left: 0;
+            transition: all ease-in-out 0.5s;
         }
         >.search-cart{
             font-size: 1.5rem;
@@ -199,7 +214,6 @@
         }
     }
 
-
     .footer-container{
         >footer{
             >.f-box{
@@ -207,9 +221,6 @@
             }
         }
     }
-
-
-   
     .follow_Insta_container{
         > .follow_Insta_title{
             font-size: 2rem;
@@ -222,7 +233,6 @@
             }
         }
     }
-
 }
 
 @media screen and (max-width:525px) {
@@ -248,8 +258,6 @@
             }
         }
     }
-
-
     .follow_Insta_container{
         > .follow_Insta_title{
             font-size: 1.3rem;
@@ -280,5 +288,4 @@
             }
         }
     }
-   
 }
